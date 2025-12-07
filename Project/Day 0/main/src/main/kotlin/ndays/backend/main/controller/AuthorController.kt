@@ -36,7 +36,7 @@ class AuthorController(
         return WebResponse(data = listAuthor, error = null)
     }
 
-    @PatchMapping("api/author/{id}")
+    @PatchMapping("/api/author/{id}")
     fun updateAuthor(@PathVariable("id") id: String,
                      @RequestBody request:UpdateAuthorRequest):WebResponse<AuthorResponse>{
         val authorResponse = authorService.updateAuthor(id, request)
@@ -44,7 +44,7 @@ class AuthorController(
         return WebResponse(data = authorResponse, error = null)
     }
 
-    @DeleteMapping("api/author/{id}")
+    @DeleteMapping("/api/author/{id}")
     fun deleteAuthor(@PathVariable("id") id:String):WebResponse<String>{
         authorService.deleteAuthor(id)
         return WebResponse(
