@@ -7,3 +7,5 @@
 - Day 4: [Query Method JPA](./Documentation/day-4.md)
 - Day 5: [JPQL vs Native Query](./Documentation/day-5.md)
 - Day 6: [Migration with Flyway](./Documentation/day-6.md)
+- Day 7: [Basic Spring Security](./Documentation/day-7.md)
+- Day 8: [Json Web Token](Documentation/day-8.md)
