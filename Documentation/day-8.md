@@ -1,5 +1,26 @@
 # Json Web Token
 
+JWT (JSON Web Token) adalah standar token berbasis JSON yang digunakan untuk autentikasi dan otorisasi pada aplikasi, terutama REST API dan sistem stateless.
+
+## Bagian JWT
+JWT terdiri atas 3 bagian:
+- Header
+  Berisi meta data token, seperti
+  - algoritma yang digunakan
+  - tipe token
+- Payload
+  Berisi data utama yang disebut claims:
+  - Registered claims
+    - sub: Subjek(username)
+    - iat: Issued at
+    - exp: Expiration
+    - iss: Issuer(Pembuat token)
+    - aud: Audience(Penerima token)
+  - Public / custom claims (ditambahkan sesuai kebutuhan aplikasi)
+- Signature
+  - Menjamin keaslian token
+  - Mencegah manipulasi payload
+
 ## Dependencies
 
 ```kotlin
