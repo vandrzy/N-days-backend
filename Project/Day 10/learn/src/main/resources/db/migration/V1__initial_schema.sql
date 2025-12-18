@@ -1,0 +1,9 @@
+
+CREATE TABLE users(
+    id VARCHAR(100) NOT NULL,
+    username VARCHAR(20) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(15) NOT NULL
+);
+
+ALTER TABLE users ADD PRIMARY KEY (id);
