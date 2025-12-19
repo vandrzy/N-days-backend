@@ -51,9 +51,7 @@ class JwtAuthFilter(
 
         }
         catch (e: JwtException){
-            response.status = HttpServletResponse.SC_UNAUTHORIZED
-            response.writer.write("Token Invalid")
-            return
+            throw JwtException("There is a problem in your token")
         }
         catch (e: ExpiredJwtException){
             response.status = HttpServletResponse.SC_UNAUTHORIZED
