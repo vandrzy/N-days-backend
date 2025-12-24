@@ -1,17 +1,9 @@
-package part2.ndbckend.learn.configuration.jwt
+# Custom Auth Filter
 
-import io.jsonwebtoken.ExpiredJwtException
-import io.jsonwebtoken.JwtException
-import jakarta.servlet.FilterChain
-import jakarta.servlet.http.HttpServletRequest
-import jakarta.servlet.http.HttpServletResponse
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
-import org.springframework.security.core.context.SecurityContextHolder
-import org.springframework.security.web.authentication.WebAuthenticationDetailsSource
-import org.springframework.stereotype.Component
-import org.springframework.web.filter.OncePerRequestFilter
-import part2.ndbckend.learn.service.UserDetailService
+Filter pada security filter chain untuk menangani proses autentikasi secara custom. 
 
+## Implementasi
+```kotlin
 @Component
 class JwtAuthFilter(
     val jwtService: JwtService,
@@ -63,3 +55,7 @@ class JwtAuthFilter(
     }
 
 }
+```
+
+- Implementasi `OncePerRequestFilter` custom auth filter hanya dijalankan sekali per request
+- Method `doFilterInternal` Menjadi gerbang autentikasi JWT

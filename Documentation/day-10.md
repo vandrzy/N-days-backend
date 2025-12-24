@@ -107,6 +107,22 @@ Berfungsi sebagai pusat penganganan error.
 - `@RestControllerAdvice` berfungsi sebagai penanganan global untuk controller REST
 - `@ExceptionHandler` Berfungsi untuk menangani exeption tertentu di spring
 
+| Nama Exception                         | Sumber Terjadi                                   | HTTP Status | Alasan Perlu Ditangani |
+|---------------------------------------|-------------------------------------------------|-------------|------------------------|
+| MethodArgumentNotValidException       | Validasi @Valid pada @RequestBody DTO           | 400 Bad Request | Memberikan detail field input yang tidak valid |
+| ConstraintViolationException          | Validasi @RequestParam / @PathVariable          | 400 Bad Request | Validasi parameter URL gagal |
+| HttpMessageNotReadableException       | JSON request tidak valid / salah format         | 400 Bad Request | Mencegah error parsing JSON dikirim sebagai 500 |
+| IllegalArgumentException              | Validasi manual di service                      | 400 Bad Request | Menandai kesalahan input dari client |
+| ResourceNotFoundException (custom)    | Data tidak ditemukan di database                | 404 Not Found | Menyatakan resource memang tidak ada |
+| EntityNotFoundException               | JPA getReferenceById                            | 404 Not Found | JPA gagal menemukan entity |
+| DataIntegrityViolationException       | Pelanggaran constraint database (unique, FK)   | 409 Conflict | Menjaga konsistensi data |
+| AuthenticationException               | Login gagal / token invalid                    | 401 Unauthorized | Client belum terautentikasi |
+| ExpiredJwtException / JwtException    | JWT expired atau tidak valid                    | 401 Unauthorized | Token tidak bisa dipakai |
+| AccessDeniedException                 | Role tidak sesuai / @PreAuthorize gagal         | 403 Forbidden | User login tapi tidak punya hak akses |
+| HttpRequestMethodNotSupportedException| HTTP method tidak didukung endpoint             | 405 Method Not Allowed | Kesalahan penggunaan endpoint |
+| NoHandlerFoundException               | Endpoint tidak ditemukan                        | 404 Not Found | Route API tidak tersedia |
+| Exception (generic fallback)          | Error tidak terduga                             | 500 Internal Server Error | Mencegah kebocoran stack trace |
+
 
 
 
