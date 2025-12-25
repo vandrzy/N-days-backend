@@ -11,3 +11,6 @@
 - Day 8: [Json Web Token](Documentation/day-8.md)
 - Day 9: [Role Base Access Control](Documentation/day-9.md)
 - Day 10: [Global Error Handler](Documentation/day-10.md)
+- Day 11: [Custom Auth Filter](Documentation/day-11.md)
+- Day 12: [Input Validation](Documentation/day-12.md)
+- 
