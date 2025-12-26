@@ -1,0 +1,8 @@
+CREATE TABLE books(
+    id VARCHAR (100) NOT NULL,
+    judul VARCHAR(150) NOT NULL,
+    tahun_terbit VARCHAR(100) NOT NULL,
+    penulis VARCHAR(150) NOT NULL
+);
+
+ALTER TABLE books ADD PRIMARY KEY (id);
