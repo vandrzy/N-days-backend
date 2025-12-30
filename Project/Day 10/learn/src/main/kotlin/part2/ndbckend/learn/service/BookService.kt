@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service
 import part2.ndbckend.learn.entity.Book
 import part2.ndbckend.learn.model.PageResponse
 import part2.ndbckend.learn.model.WebResponse
+import part2.ndbckend.learn.model.book.BookCountByAuthor
 import part2.ndbckend.learn.model.book.BookResponse
 import part2.ndbckend.learn.repository.BookRepository
 
@@ -48,6 +49,20 @@ class BookService (
 
 
     }
+
+    fun getStatistic():Map<String, Any?>{
+        return mapOf(
+            "totalBooks" to bookRepository.countBook(),
+            "minYear" to bookRepository.minTahunTerbit(),
+            "maxYear" to bookRepository.maxTahunTerbit(),
+        )
+    }
+
+    fun countBookPerAuthor(): List<BookCountByAuthor>{
+        return bookRepository.countBookByAuthor()
+    }
+
+
 
 
     private fun toBookResponse(book: Book): BookResponse{

@@ -14,3 +14,4 @@
 - Day 11: [Custom Auth Filter](Documentation/day-11.md)
 - Day 12: [Input Validation](Documentation/day-12.md)
 - Day 13: [Pagination & Sorting](Documentation/day-13.md)
+- Day 14: [Aggregation Query](Documentation/day-14.md)

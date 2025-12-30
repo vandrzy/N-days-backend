@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 import part2.ndbckend.learn.model.PageResponse
 import part2.ndbckend.learn.model.WebResponse
+import part2.ndbckend.learn.model.book.BookCountByAuthor
 import part2.ndbckend.learn.model.book.BookResponse
 import part2.ndbckend.learn.service.BookService
 
@@ -34,4 +35,26 @@ class BookController (
 
         return result
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/api/book/stats")
+    fun getStatistic(): WebResponse<Map<String, Any?>>{
+        val response = bookService.getStatistic()
+
+        return WebResponse(
+            response
+        )
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/api/book/author")
+    fun getBookPerAuthor(): WebResponse<List<BookCountByAuthor>>{
+        val response = bookService.countBookPerAuthor()
+
+
+        return WebResponse(
+            response
+        )
+    }
+
 }
