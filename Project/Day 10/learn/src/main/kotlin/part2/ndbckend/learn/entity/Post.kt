@@ -17,5 +17,10 @@ class Post (
     @Column(name = "title")
     var title: String,
     @Column(name = "description", nullable = true, columnDefinition = "TEXT")
-    var description: String?
+    var description: String?,
+
+    @Column(name = "photo_name", nullable = true)
+    var photoName: String?,
+    @Column(name = "photo_path", nullable = true)
+    var photoPath: String?
 ): BaseEntity()

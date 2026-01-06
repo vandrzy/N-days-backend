@@ -1,0 +1,4 @@
+
+ALTER TABLE posts ADD COLUMN photo_name VARCHAR(255);
+
+ALTER TABLE posts ADD COLUMN photo_path TEXT;
