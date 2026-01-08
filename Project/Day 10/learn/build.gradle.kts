@@ -32,6 +32,8 @@ dependencies {
 	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.12.5")
 	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.12.5")
 
+	implementation("com.cloudinary:cloudinary-http44:1.38.0")
+
 	implementation("org.springframework.security:spring-security-crypto")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-flyway")

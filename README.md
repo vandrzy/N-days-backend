@@ -15,3 +15,6 @@
 - Day 12: [Input Validation](Documentation/day-12.md)
 - Day 13: [Pagination & Sorting](Documentation/day-13.md)
 - Day 14: [Aggregation Query](Documentation/day-14.md)
+- Day 15: [Audit](Documentation/day-15.md)
+- Day 16: [File Upload Local](Documentation/day-16.md)
+- Day 17: [File Upload Cloud (Cloudinary)](Documentation/day-17.md)
