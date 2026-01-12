@@ -18,4 +18,5 @@
 - Day 15: [Audit](Documentation/day-15.md)
 - Day 16: [File Upload Local](Documentation/day-16.md)
 - Day 17: [File Upload Cloud (Cloudinary)](Documentation/day-17.md)
-- Day 17: [Unit Test](Documentation/day-18.md)
+- Day 18: [Unit Test](Documentation/day-18.md)
+- Day 19: [Logging](Documentation/day-19.md)
